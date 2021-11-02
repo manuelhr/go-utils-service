@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "9b6abe0a-e56f-47e0-b63d-2846c1a579a3",
+		"name": "_Go-Utils-Service-Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01.200-OK",
+			"item": [
+				{
+					"name": "Transponer2x2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Input\": [\r\n       [1,2],\r\n       [5,6]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matrix-ops/rotate-90-ccw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matrix-ops",
+								"rotate-90-ccw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transponer3x3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Input\": [\r\n       [1,2,3],\r\n       [5,6,7],\r\n       [9,10,11]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matrix-ops/rotate-90-ccw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matrix-ops",
+								"rotate-90-ccw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transponer4x4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Input\": [\r\n       [1,2,3,4],\r\n       [5,6,7,8],\r\n       [9,10,11,12],\r\n       [13,14,15,16]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matrix-ops/rotate-90-ccw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matrix-ops",
+								"rotate-90-ccw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "01.500-Error",
+			"item": [
+				{
+					"name": "Transponer_RequestVacio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matrix-ops/rotate-90-ccw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matrix-ops",
+								"rotate-90-ccw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transponer_MatrizVacia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Input\": [\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matrix-ops/rotate-90-ccw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matrix-ops",
+								"rotate-90-ccw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transponer_MatrizNoSimetrica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Input\": [\r\n       [1,2,3,4],\r\n       [5,6,7,8]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/matrix-ops/rotate-90-ccw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matrix-ops",
+								"rotate-90-ccw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
